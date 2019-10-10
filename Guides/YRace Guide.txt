@@ -1,0 +1,135 @@
+Yagu's Race Filterscript
+Main features:
+
+Filterscript - Easy to add to your existing gamemode
+Race builder - Relatively easy way to build races "on the fly"
+Unlimited races - There's no limit on amount of races you can create
+Unlimited racers - Everyone in your server can join in the same race for some true racing carnage
+Unlimited racing - Race by foot, cars, boats or planes*
+Record keeping - Top 5 lap times and top 5 track times are stored in the race, who's the fastest?
+* = Vehicles not included
+
+
+Current version: v0.4a
+
+In-depth information: 
+old v0.3 command list available here as they still work in v0.4 - http://www.surffi.net/~arkank/v03commands.txt
+Building a Race
+- /buildrace enters you to the race building mode
+- /cp creates a new checkpoint
+- /scp [number] selects an existing checkpoint
+- /rcp replaces the current checkpoint with a new one
+- /mcp [x/y/z] [amount] moves the selected checkpoint desired amount in desired direction
+- /dcp deletes the checkpoint
+- /buildmenu allows you to change the racemode, amount of laps, CP size and race type, and abort building
+- /saverace [name] saves the race
+- /editrace [name] opens an existing race for editing
+- /deleterace [name deletes an existing race
+
+Starting a race & racing
+- /loadrace [name] loads the selected race, and opens the race menu
+- When in Race Menu, you can change the amount of laps, racemode, checkpoint size and race type, abort and start the race. Note: if you change laps, racemode or CP size, the best lap/track info will not be saved!
+- /join once the race has started
+- /ready once you are ready to start (it's recommended that you get as close as possible to the start CP first!)
+- /leave if you want to leave the race
+
+Admin menu
+- /raceadmin opens the admin menu, here you can:
+
+Change the prizemode
+Change the fixed prize amount
+Change the dynamic prize multiplier
+Change the entry fee
+Change the "Majority Start"-settings
+End the currently going on race
+Set if admin-privileges are required for starting races
+Set if admin-privileges are required for race building
+Set the automatic race rotation on
+
+
+Racemodes: From the menus you can select 'Default', 'Ring', 'Yoyo and 'Mirror' modes. Default is the original from start to end-type of race, whereas Ring is the racetrack version where you drive the same circuit around multiple times. Yoyo goes from start to the end, and backwards to start again. Mirror mode is same as Default, but it goes from last CP to the first instead.
+Prizemodes: 'Fixed' prizemode gives a lump sum (default: 30000$) which is shared amongst first 3, 'Dynamic' prize sets the prize amount depending on the lenght of the race (default: 1$ per 1 meter of track), 'Entry Fee' requires players to pay up certain sum of money to join the race, and these join fees are then split amongst the first 3. 'Entry Fee + Fixed' and 'Entry Fee + Dynamic' are combinations of the aforementioned. NOTE: If only 1 player is racing, the prizes don't apply; the entry fees will be returned when the player completes the race. Also, if only 2 players are racing, the winner will get 4/6ths of the total, and 2nd will get the 2/6ths they normally get (ie. the 3rd's 1/6th is given to the winner)
+Race Rotation: This is rather simple feature currently, in scriptfiles folder is a file called 'yrace.rr' which has the race names that are in the rotation. When the rotation is enabled, the script tries to start a race every now and then. The main reason for this was if Race Admin is enabled, so that the server is "alive" even if there isn't any admins starting races.
+Majority Delay/Start: It's a bit dumb name maybe, but the settings related to this apply to when half of the racers are ready. If the delay is set to 0 (disabled), it won't work at all, otherwise the race will automatically start in X seconds. Should prevent people from waiting at the start while other people who joined are afk / doing something else entirely.
+Future additions: Squashing v0.4 bugs if any. And whatever new ideas come along, currently none.
+About saving/loading: the files will be placed into the scriptfiles directory in your SA-MP server directory, and have file extension of ".yr", as of v0.2, the files store various other bits of information as well, but you can import other races by simply placing the checkpoint coordinates in a space limited textfile, one CP per line, renaming it to <race>.yr and then opening it with editrace ingame and set the lap/mode settings.
+
+Some credit where the credit is due: Jax & Sintax for LVDM ~MG-LG_DM, which has been the base for the gamemod we are playing with my buddies and being pretty much my cheatbook on how to make things work (there are few bits in this script from there still, like the colors/strtok), and mabako for the Simple Map Editor since tossing around ramps gave me the idea of tossing around checkpoints instead, and the big help for file function usage I got from the script (since I've always hated file functions).
+
+Changelog if someone is interested:
+v0.4a
+ -Fixed a crash bug related to menus and restarting the gamemode via gmx
+
+v0.4
+-Added menus for setting most of race specific settings: /buildmenu & /raceadmin. /loadrace [race] also pops open a menu.
+-Complete overhaul on the prizes system
+ -Winner gets 3/6ths of the pot, second 2/6ths and the 3rd 1/6th.
+ -Different prize systems:
+  - Fixed:   Prize money is a set sum
+  - Dynamic:   Prize money is 1$ per 1m of whole race's lenght (ie. drive 20km, prize will be 20,000$)
+  - Entry fee:   All racers have to pay a set sum of money, the entry fees are shared among the top 3.
+  - Entry fee + Fixed:    All racers pay to join the race, prize: the fees + fixed sum of money
+  - Entry fee + Dynamic: All racers pay to join the race, prize: the fees + dynamic sum (1$ for 1m)
+-Added a race rotation system that switches between races automatically
+-Fixed a minor bug with setting /racemode 2 in race builder, thanks to Rush_iam for the report.
+-Prevented giving negative values to various commands, and added few missing feedbacks
+
+v0.3
+-You don't have to be in the starting checkpoint to /ready anymore, should allow more racers now, as well as larger vehicles.
+-Once half of the /joined players are /ready, the race will start after 2 minutes (time adjustable, can also be turned off).
+-/ready players won't be locked until countdown starts
+-Added /deleterace for deleting races (if either RACEADMIN or BUILDADMIN are defined, this command requires admin access)
+-Added racemode 3 "Mirror Mode". The races start from the last CP, and work their way to the first.
+-Added /airrace, which changes the checkpoints to air CP rings and back.
+-Added /cpsize for setting the checkpoint size for the race (default: 8.0)
+-Added #define MAX_BUILDERS, which determines how many players can build a race at once (default: 4, ~3 times smaller compile size than before)
+-Readded /racestart. You can change cpsize, mode and laps between loadrace and racestart (or via using editrace)
+-/racemode now accepts [default/ring/yoyo/mirror] as parameters, in addition to numbers
+-/bestlap doesn't show best laps, nor are the laptimes are saved for racemode 0 races (since they don't have laps anyways)
+-/bestlap [race] and /bestrace [race] now display the topscores for the specific race
+-/bestlap and /bestrace will display the scores for the previous race until new one is loaded.
+-Improved the readability of time
+-Multiple small bug fixes
+
+v0.2d [d for dcmd]
+-Code cleaning. All commands now use dcmd instead, new function for setting checkpoints during race
+-Fixed a bug that caused the automatic endrace to stop functioning in certain situations.
+-Added /racemode and /setlaps to /buildhelp
+-Fixed a bug with /racemode and /setlaps in building mode, now they should be saved properly for all builders.
+
+v0.2
+-Removed /startrace, doing /loadrace now loads the race, and starts it.
+-Added /setlaps for setting how many laps are to be driven. Doing this in buildrace mode saves the amount of laps, doing this while a race is active overrides the race's laps setting.
+-Added /racemode for setting the racemode. See OP for details
+-Added /bestlap and /bestrace for viewing the top-5 lap times and track times.
+-Modified the racefile format slightly, it now stores the top-5 times, along with racemode/laps information and race creator's name, as well as version number for future compatibility.
+
+v0.1a
+-Prevented passengers from getting /ready
+-Prevented using /ready to unready once countdown has started
+-Prevented /buildrace when the wannabe builder is participating in a race
+-Trying to /ready outside the starting checkpoint now returns the correct error message
+-Fixed few situations where race wouldn't start even if everyone was /ready
+-Added #defines RACEADMIN and BUILDADMIN which disables some commands from non-admins, uncomment from source to enable
+-Players have their builder/racer status removed on disconnect
+-Some code cleaning, new functions and such
+
+
+v0.1
+-Prevented /joining races that have already started (ie. countdown had started)
+-Added/rcp for replacing current checkpoint with a new one
+-Added /editrace for editing previously created tracks.
+-Using OnPlayerEnterRaceCheckpoint() instead of timer, should work even better than before (thanks to switch for letting me know about the option! :P)
+-Added sounds to countdown and checkpoints.
+
+
+v0.01
+-Fixed a bug with /scp when selecting CP 0 when no CPs have been created yet.
+-Prevented players from /joining the race multiple times (thanks to switch for noticing this)
+-Now multiple people can be building races at the same time
+-Cleaned up the code a bit, using multidimensional arrays now.
+-Added /mcp for moving checkpoints. Usage: /mcp [x/y/z] [amount]
+-Added /dcp for deleting checkpoints. Usage: /dcp
+
+v0.001
+-Initial release.

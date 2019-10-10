@@ -1,0 +1,89 @@
+Install Instructions:
+    * 1.Download the script
+    * 2.Extract the contents of "gamemodes" into your gamemodes folder
+    * 3.Extract the contents of "scriptfiles" into your "scriptfiles" folder
+    * 4.In your server config you must have the line gamemode0 [Name of Gamemode] 1
+    * 5.Enjoy:D, If you don't enjoy then you did something wrong!!!
+
+
+Common Sense:
+	-You must have every single file included in this package otherwise nothing will work!
+
+File Sys Setup:
+	The businesses setup file must contain the coords/info of your businesses to be added into the GM in the following format:
+		x,y,z,name,price,profit (the profit amount will be transferred to the business cash box every hour)
+
+	The vehicles setup file must contain the coords of your vehicles to be added into the GM in the following format:
+		x,y,z,z-angle,color1,color2
+
+Making Admins:
+	-=(How To Make Yourself an Admin)=-
+	1. Open your server.cfg and set a rcon password:
+		rcon_password "Your Password"
+	2.Go into your server and login into rcon. Write this in chat:
+		/rcon login "Your Password"
+	3.You have are now logged in as an admin.
+	4. And now give yourself 'Admin Powers' with:
+		/giveladmin
+	5. Now you are now a level 5 admin
+
+	-=(Make someone else an admin*)=-
+	1.Go into your game and do this:
+		/setlevel [playerid] [level(1-5)]
+	2.Have fun
+*Remember that you have to be a level 5 admin to give someone else admin rights!
+
+House Usage:
+	1. Login as rcon admin( /rcon login <password> ).
+	2. Stand on the door of the house and simply type '/househelp'.
+	3. Once you have completed building as many houses you want,
+		open your gamemode(script) and copy the code from,
+		'scriptfiles/SATDM/HouseCoords.txt'.
+	4. Paste the code under 'OnGameModeInit'.
+	5. Change the house numbers to fit with the other houses.
+	6. Change MAX_HOUSES to the number of houses you have.
+
+Changing the Businesses:
+	Whenever you change anything in "businesses_setup.txt"
+	You MUST Delete "businesses_save.txt" from the "Scriptfiles/SATDM/Businesses" folder
+	**WARNING: Deleting "businesses_save.txt" requires you to set "bowner" and "bowned" to "0" in each user file, located at "Scriptfiles/ladmin/users"
+
+Changing the Vehicles
+	Whenever you change anything in "vehicles_setup.txt"
+	You MUST Delete "vehicles_save.txt" from the "Scriptfiles/SATDM/Vehicles" folder
+	**WARNING: Deleting "vehicles_save.txt" requires you to set "vowned" and "vowner" to "0" in each user file, located at "Scriptfiles/ladmin/users"
+
+MULTI Language Support Help:
+      //------------------------MULTI-LANGUAGE FORMAT EXAMPLE!!!----------------------
+          if((strcmp(cmdtext,"/help",true) == 0)||
+         	(strcmp(cmdtext,"/aide",true) == 0))
+         	{
+              switch (Language[playerid])
+              {
+                  case 0:
+                  {
+                      SendClientMessage(playerid,0xFFD400AA,"HELP:");
+                      SendClientMessage(playerid,0xFFD400AA,"Type /lock to close your vehicle.");
+                      SendClientMessage(playerid,0xFFD400AA,"Type /unlock to open your vehicle.");
+                  }
+                  case 1:
+                  {
+                      SendClientMessage(playerid,0xFFD400AA,"AIDE:");
+                      SendClientMessage(playerid,0xFFD400AA,"Tape /lock pour fermer ton vehicule.");
+                      SendClientMessage(playerid,0xFFD400AA,"Tape /unlock pour ouvrir ton vehicule.");
+                  }
+              }
+              return 1;
+          }
+
+      You also must uncomment "//SendClientMessage(playerid,0xC0C0C0FF,"Please choose a language : /en (default is EN)");" From the gamemode
+
+Change Object Stream Distance/Business Limits:
+	To change the Business limits go to the line "#define B_LIMIT " and change the number to anything you want.
+	To change the object stream distance around you, go to the line "#define DEFAULT_SPAWN_DIST"
+
+	To Change the Vehicle Stream Distance in V9 you must edit "stream_distance" in your server config file!
+
+Copyright Notice:
+	MoNeYPiMp™ ©2007-2009
+	WARNING: Removing ANY of the credits entitled in the following gamemode is a crime punishable by the sa-mp team. You are allowed to modify the gamemode, leaving ALL credits in tact, re-releasing a modified version of this gamemode without my consent, will get you banned.

@@ -1,0 +1,60 @@
+
+	LethaL Adminscript 
+
+		 LAdmin4
+
+Version: 4.2
+Release: July 08
+Creator: LethaL
+
+
+------------Installation------------
+
+1. Copy the 'ladmin' folder into scriptfiles (or create the folders)
+2. Copy 'ladmin4v2.amx' and 'ladmin4v2.pwn' into filterscripts folder
+
+NB. To complie you will need 'lethaldudb2.inc' in the includes folder
+
+
+------------Making Yourself An Admin------------
+
+1. Connect to server and register, you will now be automatically logged in.
+2. Log into rcon using "/rcon login <password>" Without the quotes
+3. Type "/giveladmin", again without the quotes
+4. You will get a confirmation message notifying you, that you have successfully become LAdmin Level 5
+
+
+------------General Info------------
+
+>There are 5 levels, levels 1, 2, 3, 4 are admins and 
+                     level 5 for the server owner
+>There are lots of commands! Type /lcommands to see a list,
+ or type /lcmds for a shorter list. 
+                  (note not all commands are on this list)
+
+
+------------Config------------
+
+>The config file has all the main setting for the adminscript
+  0=disable  1 = enable(normally)
+  e.g. To disable AntiSpam you would put
+	AntiSpam=0
+
+>ForbiddenNames.cfg contains the names that you dont want players to use,
+  if they connect with 1 of these names they will be kicked
+  To add a name type /forbidname [name] in game
+
+>ForbiddenWords.cfg if a player uses 1 of these words the characters will be
+  replaced with **** (note admins are not effected by this)
+  To add a word type /forbidword [word] In Game
+
+>To Enable Or Disable in game type /enable  or /disable
+  e.g. /disable readPMs
+
+
+------------Logs------------
+
+>Logs for kicks, bans, admins, bot attacks etc are saved in files in the logs folder
+
+If You have any questions or find any bugs post on the sa-mp forum
+http://forum.sa-mp.com

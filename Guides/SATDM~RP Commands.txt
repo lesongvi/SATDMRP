@@ -1,0 +1,184 @@
+=====================================Help=====================================
+San Andreas Team Death Match ~ Role Play + KZI + LAdmin Script by -=MoNeYPiMp=-
+For GENERAL commands, please type /commands. -=|=- For ADMIN/ACCOUNT commands, please type /lcommands.
+For BANK commands, please type /bankhelp. -=|=- For GANG commands, please type /ganghelp.
+For tAxI VMenu please type /vmenu. -=|=- For WEED commands, please type /weedhelp.
+For BUSINESS commands, please type /bizhelp. -=|=- For LAW commands, please type /lawhelp.
+For CELLPHONE commands, please type /cellhelp. -=|=- For CIMINAL commands, please type /crimehelp
+For TELEPORT commands, please type /telehelp. -=|=- For HOUSE commands, please type /hoptions
+For RACE commands, please type /racehelp. -=|=- For HOUSE ADMIN commands, please type /househelp
+For Medic commands, please type /medichelp.
+Type /credits to see a list of the ppl who contributed to this script.
+
+--------------------------------Commands list---------------------------------
+To See the server rules type /rules
+You can use /register and /login. -=|=- To check your inventory use /inventory
+To see what admins are online type /admins
+To start a countdown type /count [time]
+To slap another player type /slap [player id] [object]
+To commit suicide Type /kill
+To whisper to someone around you type /(w)hisper
+To talk about yourself type /me -=|=- To Whisper to people in your vehicle Type /cw
+To have sex with another player type /sex
+
+-----------------------------Lethal Admin System Commands--------------------
+
+  			  ---=Level 1 Admin Commands =---
+getinfo, weaps, vr, ltune, lhy, lnos, lp, asay, ping, lslowmo, ltc, morning,
+adminarea, reports, richlist, miniguns, saveplace, gotoplace,
+saveskin, useskin, dontuseskin, setmytime, ip, lconfig.
+
+
+   			 ---=Level 2 Admin Commands =---
+giveweapon, setcolour, lockcar, unlockcar, burn, spawn, disarm, lcar, lbike,
+lheli, lboat, lplane, hightlight, announce, announce2, screen, jetpack, flip,
+goto, vgoto, lgoto, fu, warn, slap, jailed, frozen, mute, unmute, muted,
+laston, lspec, lspecoff, lspecvehicle, clearchat, lmenu, ltele, lcm, ltmenu,
+write.
+
+
+   			 ---=Level 3 Admin Commands =---
+sethealth, setarmour, setcash, setscore, setskin, setwanted, setname, setweather,
+settime, setworld, setinterior, force, eject, bankrupt, sbankrupt, ubound, lweaps,
+lammo, countdown, duel, car, carhealth, carcolour, setping, setgravity, destroycar,
+teleplayer, vget, givecar, gethere, get, kick, explode, jail, unjail, freeze, 
+unfreeze, akill,aka, disablechat, clearallchat, caps, move, moveplayer, healall,
+armourall, setallskin, setallwanted, setallweather, setalltime, setallworld,
+setallscore, setallcash, giveallcash, giveallweapon, lweather, ltime, lweapons, setpass
+
+
+   			 ---=Level 4 Admin Commands =---
+enable, disable, ban, rban, settemplevel, crash, spam, god, die, uconfig,
+botcheck, lockserver, unlockserver, forbidname, forbidword, 
+fakedeath, spawnall, muteall, unmuteall, getall, killall, freezeall,
+unfreezeall, kickall, slapalll, explodeall, disarmall, ejectall.
+
+
+  			  ---=Level 5 Admin Commands =---
+god, sgod, setlevel, pickup, object, fakechat, jbcfg, jbcmds.
+-----------------------------------Bank Help----------------------------------
+Teleport to the Bank - /telebank -=|=- Exit the Bank - /exitbank
+Buy 1 Condom - /condom -=|=- Buy weed - /buyweed(bag) [Grams]
+Deposit Amount - /(g)deposit [amount]
+Withdraw Amount - /(g)withdraw [amount]
+Check Balance - /(g)balance
+Give Cash - /givemoney [recipient id] [amount] - sends a specified amount of money to the specified player id
+Attempt to rob the bank - /robbank
+You must be in an ATM area (located in the 24/7 shops):
+Bank will not be reset when you die or reconnect.
+
+--------------------------------Gang Commands List----------------------------
+/gang create [name]
+/gang join
+/gang invite [playerID]
+/gang quit
+/ganginfo [number] (no number given shows your gang's info)
+/gdeposit [money] /gwithdraw [money] /gbalance
+! (prefix text for gang-chat)
+
+---------------------------------Weed Help-----------------------------------
+To buy some weed/weedbag type /buyweed(bag) [Grams] in any 24/7
+To call a for weed type /reqweed
+To give weed to another player type /giveweed [playerid] [grams]
+To offer weed to another player type /offerweed [playerid] [$/gram]
+To smoke some weed type /takeweed [grams]
+To see how much weed you've got type /weedinfo
+To teleport to a 24/7 type /telebank
+
+---------------------------------Business Help--------------------------------
+Businesses are indicated on the map by the yellow circle icons and in the gameworld by a spinning blue house pickup.
+Type /buybiz to purchase the business. Must be within 7-8m of business icon.
+Type /sellbiz to sell your business. Must be within 7-8m of business icon.
+Type /cashbox to transfer you business' earnings to your personal bank account. Must be within 7-8m of business icon.
+Type /gotobiz to teleport to your biz
+
+--------------------------------Teleport Help---------------------------------
+/home will teleport your spawn point
+/telebank will teleport you to the bank
+/exitbank will teleport you to your location before teleporting to the bank
+
+-----------------------------------Phone Help---------------------------------
+Every person has their own cellphone - calls cost $1/second.
+To make a call - /call [player id].
+To answer a call - /answer.
+To end a call - /hangup.
+
+================================Job Commands=================================
+-------------------------- Law Enforement Commands --------------------------
+Use /taze [playerid] to taze a player. -=|=- Use /cm [message] to send a cop radio message.
+Use /vc [playerid] to report visual contact. -=|=- Use /rep [playerid] to report a player.
+Use /fine [playerid] to fine a player. -=|=- Use /po [playerid] to request that a player pull over.
+Use /jlist  to view the list of players in jail. -=|=- Use /wlist to view the list of wanted people.
+Use /search [playerid] to search a player for weed whilst handcuffed.
+Use /(un)cuff [playerid] to put/remove handcuffs for a player.
+Use /radon or /radoff to enable/diable the cop radio.
+Use /sur if you are an army officer to ask a suspect to freeze and surrender.
+Use /parole to release a prisoner from jail
+
+----------------------------- Criminal Commands ----------------------------
+To rob another player type /rob (ID).
+To attempt to rob the bank - /robbank
+To force your cock into another player type /rape.
+To break out of your hand cuffs type /breakcuffs (25m away from cop).
+To escape from jail type /escape.
+To invite a friend to visit you in alcatraz type /reqvisit.
+To escape from alcatraz type /breakout (Must be with a Visitor).
+
+------------------------------- Medic Commands -------------------------------
+Use /heal to heal another player
+Use /cure to cure another player from any disease
+Use /infect to infect another player with Chlamydia
+Use /medic to call for a medic!
+
+================================House Commands================================
+-------------------------------House admin Help-------------------------------
+---===[ HouseSave For House Inc By Antironix ]===---
+-=> Type /housesmall to save pos for a small house
+-=> Type /housemedium to save pos for medium house
+-=> Type /housemodern to save a pos for a modern house
+-=> Type /housemansion to save a house as a mansion
+
++---------------------------------House options---------------------------------+
+|/sethrent [0/1] [Cost] - House owner						|
+|/gethrent            - House owner  -=|=- /sellh                 - House Owner	|
+|/lockh               - Renter/Owner -=|=- /unlockh               - Renter/Owner|
+|/payrenth            - Renter       -=|=- /unrenth               - Renter	|
+|/renth               - Guest        -=|=- /buyh                  - Guest	|
+|/enterh              - Anyone       -=|=- /exith                 - Anyone	|
++-------------------------------------------------------------------------------+
+
+================================Race Commands=================================
+-----------------------Yagu's race script racing help-------------------------
+/loadrace [name] to load a track and start it.
+/join to join a race
+/ready to begin the race once others are also ready
+/leave to leave the race
+/endrace to abort the race
+/bestlap and /bestrace to display record times for races, or specify a race to see the times for it
+/buildhelp for info on builing race
+/raceadmin for admin settings
+
+----------------------Yagu's race script building help------------------------
+/buildrace to start building a race
+/cp for a new checkpoint
+/scp to select an old checkpoint
+/dcp to delete a checkpoint
+/mcp to move a checkpoint
+/rcp to replace checkpoint with a new one
+/editrace to load a race in the editor
+/saverace [name] to save the race
+/buildmenu to set racemode/laps/etc
+/racehelp for info on racing itself
+/raceadmin for admin settings
+
+ --------------------------------------------------------Credits------------------------------------------------------
+|-------------------= San AndreasTeam Death Match ~ Role Play + KZI + LAdmin Script by -=MoNeYPiMp=-------------------|
+|----------------=Original Script designer and concept - MoNeYPiMp (email <::> moneypimp2@hotmail.com)=---------------|
+|--------------=Extreme Vehicle Management + er Script - By -=tAxI= -|- Kowaz Zone War System by Kovalski-------------|
+|-------------------------=Lethal-Admin administrator script by Lethal embedded by MoNeYPiMp!=------------------------|
+|------------------=Original code for Vehicle HP bar was made by Mr-Tape - Highly modified by tAxI=-------------------|
+|---------------------=Cellphone system code designed and made by [eLg]Beckzyboi (www.elg.uk.tt)=---------------------|
+|-----------=Selection Screen Sounds made by CodeMaster -|- Deathmatch Script with menu by B.I.G. aka Mario=----------|
+|------------------=Multi Language Code made by Yom -|- Kapils Instant House Constructions by Kapil=------------------|
+|------------------=Race Script by Yagu -|- Gang script taken from Jax's LVDM ~MoneyGrub(+LandGrab)=------------------|
+|-If you wish to use this script or any parts of it in your own gamemode please feel free but you must GIVE CREDIT!!!-|

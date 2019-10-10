@@ -1,0 +1,35 @@
++-----------------------------+
+¦ How to Configure JunkBuster ¦
++-----------------------------+
+
+>>> To configure JunkBuster correctly, you must follow this steps. <<<
+
+To:
+	-Configure JunkBuster's Options
+	Start your gamemode, go ingame and login. 
+	Now type /jbcfg. A dialog will appear.
+	Choose the listitem "Set a var". After you have done this
+	you will see all JunkBuster variables with the current values. 
+	It's the best you choose every variable. Double-click on a variable and a new
+	dialog will appear where you can set the variable. There will be a description for every variable, too. 
+	Read description for the chosen variable before you change it.
+	After you have customized the JunkBuster configuration. Go back to the main dialog (/jbcfg) and 
+	choose "Save configuration to file".
+	
+	-Add bad words
+	1. Open "BadWords.cfg" in the folder "scriptfiles/JunkBuster".
+	2. Add or remove bad words. 
+	3. Go ingame again, tpye /jbcfg and choose "Load configuration from file" to load the bad words.
+	
+	-Add forbiden Weapons
+	1. Open "ForbiddenWeapons.cfg" and add or remove weapon IDs. 
+	2. Minigun (38), both rocket launcher (35,36) and flamethrower (37) are forbidden by default.
+	3. Go ingame again, tpye /jbcfg and choose "Load configuration from file" to load the forbidden weapons.
+
+
+Type /jbcmds ingame for more JunkBuster commands.
+
+
+JunkBuster is now ready to protect your server from spammers, hackers, cheaters and other noobs.
+If you find a bug, REPORT it in SA-MP forums in the JunkBuster topic.
+Have fun and feel safer.
